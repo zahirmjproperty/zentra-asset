@@ -1,54 +1,213 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zentra Asset — Property &amp; Asset Management</title>
-<meta name="description" content="Zentra Asset — property, tenancy and asset management system by Zentra Property Group.">
-<link rel="icon" href="/favicon.svg">
-<!-- Sistem dalaman: jangan indeks sehingga diluluskan untuk awam -->
+<title>Zentra Asset — All Your Properties. One Powerful System.</title>
+<meta name="description" content="Zentra Asset — a complete property asset management system: property records, tenancy, financials, compliance and owner reporting in one platform.">
 <meta name="robots" content="noindex, nofollow">
-<style>
-:root{--ink:#0f172a;--mut:#475569;--line:#e2e8f0;--brand:#0b5cab;--bg:#f8fafc}
-*{box-sizing:border-box}
-body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-.wrap{max-width:860px;margin:0 auto;padding:56px 24px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em}
-.dot{width:10px;height:10px;border-radius:50%;background:var(--brand)}
-h1{font-size:34px;line-height:1.2;letter-spacing:-.02em;margin:28px 0 10px}
-p.lead{font-size:18px;color:var(--mut);margin:0 0 32px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:32px 0}
-.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
-.card h3{margin:0 0 6px;font-size:15px}
-.card p{margin:0;font-size:14px;color:var(--mut)}
-.badge{display:inline-block;font-size:12px;font-weight:600;color:#92400e;background:#fef3c7;border:1px solid #fde68a;border-radius:999px;padding:3px 10px}
-footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
-code{background:#eef2f7;padding:1px 6px;border-radius:5px;font-size:13px}
-</style>
+<link rel="stylesheet" href="assets/zentra.css">
 </head>
 <body>
-<div class="wrap">
-  <div class="brand"><span class="dot"></span> Zentra Property Group</div>
 
-  <h1>Zentra Asset</h1>
-  <p class="lead">Property, tenancy and asset management — the record of money, compliance and owner reporting.</p>
+<!-- ===== reusable brand mark: three stacked isometric layers ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8CE86"/><stop offset="45%" stop-color="#C9A227"/><stop offset="100%" stop-color="#9A7A2E"/>
+    </linearGradient>
+    <symbol id="mark" viewBox="0 0 64 64">
+      <path d="M32 6 L58 20 L32 34 L6 20 Z" fill="url(#gGold)" opacity="1"/>
+      <path d="M32 22 L58 36 L32 50 L6 36 Z" fill="url(#gGold)" opacity=".72"/>
+      <path d="M32 34 L54 46 L32 58 L10 46 Z" fill="url(#gGold)" opacity=".44"/>
+      <path d="M32 6 L58 20 L32 34 L6 20 Z" fill="none" stroke="#9A7A2E" stroke-width="1.1" opacity=".85"/>
+      <path d="M32 22 L58 36 L32 50 L6 36 Z" fill="none" stroke="#9A7A2E" stroke-width="1" opacity=".6"/>
+      <path d="M32 34 L54 46 L32 58 L10 46 Z" fill="none" stroke="#9A7A2E" stroke-width="1" opacity=".45"/>
+    </symbol>
+  </defs>
+</svg>
 
-  <p><span class="badge">Phase 1 — environment ready</span></p>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#" aria-label="Zentra Asset home">
+      <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-text"><b>ZENTRA</b><span>ASSET</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#" aria-current="page">Home</a>
+      <a href="#features">Features</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-tagline">
+      <span>SMARTER MANAGEMENT<br>GREATER VALUE</span>
+      <span class="bar"></span>
+    </div>
+    <a class="header-login" href="#login">Login</a>
+  </div>
+</header>
 
-  <div class="grid">
-    <div class="card"><h3>Tenancy</h3><p>Tenancies, rent collection, arrears escalation and renewals.</p></div>
-    <div class="card"><h3>Units &amp; Bills</h3><p>Units, utilities, dues and payment status.</p></div>
-    <div class="card"><h3>Maintenance</h3><p>Repairs, contractors, SLA tracking and inspections.</p></div>
-    <div class="card"><h3>Owners</h3><p>Owner statements and transparent net positions.</p></div>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-copy">
+    <span class="sheen tl" aria-hidden="true" data-bleed></span>
+    <span class="sheen bl" aria-hidden="true" data-bleed></span>
+
+    <p class="eyebrow">Welcome To</p>
+    <h1 class="display"><span class="grad-silver">ZENTRA</span> <span class="grad-gold">ASSET</span></h1>
+    <p class="subhead">All Your Properties. One Powerful System.</p>
+    <p class="lead">A complete platform to manage your properties, tenancy, and assets — houses, buildings, factories
+      and warehouses. Track money, stay compliant, and report to owners from a single dashboard.</p>
+
+    <div class="feature-rail">
+      <div class="item">
+        <span class="icon-circle" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg>
+        </span>
+        <span>Property<br>Management</span>
+      </div>
+      <span class="divider-fade"></span>
+      <div class="item">
+        <span class="icon-circle" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 6a3 3 0 0 1 0 6"/><path d="M18 20a6 6 0 0 0-3-5.2"/></svg>
+        </span>
+        <span>Tenancy<br>Management</span>
+      </div>
+      <span class="divider-fade"></span>
+      <div class="item">
+        <span class="icon-circle" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M14.8 9.6a2.6 2.6 0 0 0-2.6-1.6c-1.5 0-2.6.9-2.6 2s1 1.7 2.6 2 2.6.9 2.6 2-1.1 2-2.6 2a2.6 2.6 0 0 1-2.6-1.6"/></svg>
+        </span>
+        <span>Financial<br>Records</span>
+      </div>
+      <span class="divider-fade"></span>
+      <div class="item">
+        <span class="icon-circle" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <span>Compliance &amp;<br>Reporting</span>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="zbtn zbtn--pill" href="#login">
+        <span class="zbtn-face zbtn-face--hero">
+          <span class="orb" aria-hidden="true">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+          <span class="stack">Login To Zentra Asset<small>Access Your Asset Management System</small></span>
+        </span>
+      </a>
+    </div>
   </div>
 
-  <h2 style="font-size:20px;margin:34px 0 8px">Status</h2>
-  <p style="color:var(--mut);margin:0 0 6px">This environment is being set up. The application modules are being deployed in phases; nothing here is live yet.</p>
-  <p style="color:var(--mut)">Host: <code>asset.zentrapropertygroup.com</code></p>
+  <!-- visual field: CSS/SVG-composed, no stock photo dependency -->
+  <div class="hero-visual" role="img" aria-label="Zentra Asset dashboard shown on a laptop and phone against a skyline at dusk">
+    <!-- hero background: photographic, not drawn (supplied by Zahir) -->
+    <picture class="hero-photo">
+      <source media="(max-width: 720px)" srcset="assets/img/hero-city-md.webp" type="image/webp">
+      <source media="(max-width: 720px)" srcset="assets/img/hero-city-md.jpg" type="image/jpeg">
+      <source srcset="assets/img/hero-city.webp" type="image/webp">
+      <img src="assets/img/hero-city.jpg" alt="" aria-hidden="true" width="1800" height="1344"
+           fetchpriority="high">
+    </picture>
+    <span class="hero-scrim" aria-hidden="true"></span>
 
-  <footer>
-    &copy; 2026 Zentra Property Group. Internal system — not for public use or indexing.
-  </footer>
-</div>
+    <span class="plaza"></span>
+
+    <div class="devices">
+      <!-- laptop -->
+      <div class="laptop">
+        <div class="laptop-screen">
+          <div class="dash">
+            <div class="dash-rail">
+              <svg class="dmark" aria-hidden="true"><use href="#mark"/></svg>
+              <div class="on">Dashboard</div><div>Properties</div><div>Tenancy</div>
+              <div>Finance</div><div>Compliance</div><div>Owner Report</div><div>Settings</div>
+            </div>
+            <div class="dash-main">
+              <div class="dash-stats">
+                <div class="s"><b>24</b><i>Total Properties</i></div>
+                <div class="s"><b>18</b><i>Active Tenancies</i></div>
+                <div class="s"><b>218,450</b><i>Rent / Income (RM)</i></div>
+              </div>
+              <div class="dash-sec">Portfolio Overview</div>
+              <div class="dash-port">
+                <div class="p"><b>12</b><i>Residential</i></div>
+                <div class="p"><b>6</b><i>Commercial</i></div>
+                <div class="p"><b>4</b><i>Industrial</i></div>
+                <div class="p"><b>2</b><i>Warehouse</i></div>
+              </div>
+              <div class="dash-sec">Recent Transactions</div>
+              <table class="dash-tbl">
+                <tr><td>Rental — Unit A-12</td><td>RM 2,800</td></tr>
+                <tr><td>Rental — Unit B-04</td><td>RM 1,950</td></tr>
+                <tr><td>Maintenance — Lobby</td><td>RM 640</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+      <!-- phone -->
+      <div class="phone">
+        <svg class="pmark" aria-hidden="true"><use href="#mark"/></svg>
+        <ul>
+          <li><i></i>Property Records</li>
+          <li><i></i>Tenancy Management</li>
+          <li><i></i>Financial Records</li>
+          <li><i></i>Compliance Tracking</li>
+          <li><i></i>Owner Reporting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BENEFIT BAND ===================== -->
+<section class="band" id="features">
+  <div class="tagline"><span>Built For Property Owners &middot; Managed For A Better Tomorrow</span></div>
+  <div class="wrap">
+    <div class="benefits">
+      <div class="b">
+        <span class="icon-tile" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6z"/></svg>
+        </span>
+        <div><b>Greater Control</b><span>Keep your assets secure</span></div>
+      </div>
+      <div class="b">
+        <span class="icon-tile" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+        </span>
+        <div><b>Higher Efficiency</b><span>Automate &amp; simplify</span></div>
+      </div>
+      <div class="b">
+        <span class="icon-tile" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="m20 8-3.5-3.5"/><path d="M20 4h-4"/></svg>
+        </span>
+        <div><b>Increased Value</b><span>Better decisions, stronger returns</span></div>
+      </div>
+      <div class="b">
+        <span class="icon-tile" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a4 4 0 0 0 .4-8A5.5 5.5 0 0 0 6.6 10 4 4 0 0 0 7 18z"/></svg>
+        </span>
+        <div><b>Anytime Anywhere</b><span>Access on any device</span></div>
+      </div>
+    </div>
+  </div>
+  <svg class="watermark" data-bleed aria-hidden="true"><use href="#mark"/></svg>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer" id="contact">
+  <div class="wrap inner">
+    <svg class="brand-mark" aria-hidden="true" style="width:26px;height:26px"><use href="#mark"/></svg>
+    <b style="font-size:14px;letter-spacing:.14em;color:#fff">ZENTRA ASSET</b>
+    <span class="micro">Design mock-up &middot; Zentra Property Group</span>
+  </div>
+</footer>
+
 </body>
 </html>
